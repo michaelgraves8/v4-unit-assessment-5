@@ -1,0 +1,3 @@
+INSERT INTO helo_users
+VALUES ($1, $2)
+RETURNING *;
