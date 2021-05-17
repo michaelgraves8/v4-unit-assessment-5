@@ -18,7 +18,7 @@ class Post extends Component {
   }
 
   componentDidMount() {
-    axios.get(`/api/post/1`)
+    axios.get(`/api/post/${this.props.id}`)
       .then(res => {
         this.setState({ ...res.data, loading: false })
       })
@@ -40,7 +40,7 @@ class Post extends Component {
               </div>
             </div>
             <div className='post-content-box'>
-              <img className='post-img' src={imgSrc} alt='post' />
+              <img className='post-img' src={imgSrc} alt='post' className='userImage'/>
               <p>{this.state.content}</p>
             </div>
           </div>
